@@ -37,3 +37,19 @@ ds <- read.csv(here("data", "msg.csv"))
 wordcloud2(data = ds, shape = "cardioid")
 ```
 
+# sqrt(9) square root
+# sqrt(25)
+# nchar("snow") number of characters
+# nchar("macalester")
+# sqrt(nchar("snow"))
+
+# rep(x = 2, times = 5) repeat x for # times
+# rep(times = 5, x = 2)
+# rep(2, 5) same as line 46
+# rep(5, 2) --> x=5, times=2
+# seq(from = 2, to = 10, by = 2) sequence numbers from 2 to 10 by 2
+# seq(2, 10, 2) same as line 50
+# seq(from = 2, to = 10, length = 3) sequence 3 numbers from 2 to 10
+# seq(2, 10, 3) sequence numbers from 2 to 10 by 3
+# rep(seq(3,12,3),2) combine 2 functions
+

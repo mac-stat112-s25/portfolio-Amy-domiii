@@ -53,3 +53,14 @@ wordcloud2(data = ds, shape = "cardioid")
 # seq(2, 10, 3) sequence numbers from 2 to 10 by 3
 # rep(seq(3,12,3),2) combine 2 functions
 
+degrees_c <- -13
+degrees_c
+
+degrees_c * (9/5) + 32
+degrees_f <- degrees_c * (9/5) + 32
+degrees_f
+
+print(degrees_tomorrow) 
+#degrees_tomorrow doesn't exist
+
+

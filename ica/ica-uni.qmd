@@ -3,3 +3,140 @@ title: "Univariate Viz"
 ---
 
 Use this file for practice with the **univariate viz** in-class activity.  Refer to the class website for details.
+
+```{r}
+# Import data
+hikes <- read.csv("https://mac-stat.github.io/data/high_peaks.csv")
+```
+
+```{r}
+head(hikes)
+```
+
+```{r}
+# Load the package
+library(tidyverse)
+
+```
+
+*Bar Chart*
+```{r}
+# Use the ggplot function
+ggplot(hikes, aes(x = rating))
+# aes=aesthetics, x = one variable in the df
+```
+
+```{r}
+# with geom_bar(), this graph turns into a bar chart, showing the number of people with different ratings
+ggplot(hikes, aes(x = rating)) +
+  geom_bar()
+```
+
+```{r}
+# labs() adds titles of x&y axis
+ggplot(hikes, aes(x = rating)) +
+  geom_bar() +
+  labs(x = "Rating", y = "Number of hikes")
+```
+
+```{r}
+# geom_bar(fill="color") --> color fill of the bars
+ggplot(hikes, aes(x = rating)) +
+  geom_bar(fill = "blue") +
+  labs(x = "Rating", y = "Number of hikes")
+```
+
+```{r}
+# geom_bar(color="color") --> 边线color
+ggplot(hikes, aes(x = rating)) +
+  geom_bar(color = "orange", fill = "blue") +
+  labs(x = "Rating", y = "Number of hikes")
+```
+
+```{r}
+# theme_minimal() --> without background color
+ggplot(hikes, aes(x = rating)) +
+  geom_bar(color = "orange", fill = "blue")  +
+  labs(x = "Rating", y = "Number of hikes") +
+  theme_minimal()
+```
+
+```{r}
+# theme_minimal() --> without background color
+ggplot(hikes, aes(x = elevation)) +
+  geom_bar(color = "orange", fill = "blue")  +
+  labs(x = "Elevation", y = "Number of hikes") +
+  theme_minimal()
+# bad viz --> wrong plot as this is numerical
+```
+
+*Histogram*
+```{r}
+# building histogram
+ggplot(hikes, aes(x = elevation))
+```
+
+```{r}
+# outline color = white
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white") 
+```
+
+```{r}
+# color fill = blue
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", fill = "blue") 
+```
+
+```{r}
+# titles of x&y axis are added
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white") +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+```
+
+```{r}
+# geom_histogram(binwidth= the wideth of)
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 1000) +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+```
+
+```{r}
+# band width is changed to 5
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 5) +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+```
+
+```{r}
+# bind width = 200
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 200) +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+```
+
+*Density Plots*
+```{r}
+ggplot(hikes, aes(x = elevation)) +
+  geom_density()
+```
+
+```{r}
+ggplot(hikes, aes(x = elevation)) +
+  geom_density(color = "orange", fill = "blue")
+```
+
+```{r}
+# general codes:
+# ggplot(___, aes(x = ___)) + 
+ # geom___(color = "___", fill = "___") + 
+  # labs(x = "___", y = "___")
+```
+
+
+
+
+
+
+

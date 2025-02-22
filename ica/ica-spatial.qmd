@@ -73,14 +73,13 @@ leaflet(data = fave_places) |>
 # Import starbucks location data
 starbucks <- read.csv("https://mac-stat.github.io/data/starbucks.csv")
 
-head(starbucks_mn)
-```
-
-```{r}
 # Don't worry about the syntax
 starbucks_mn <- starbucks |>   
   filter(Country == "US", State.Province == "MN")
+
+head(starbucks_mn)
 ```
+
 
 ```{r}
 # create a leaflet

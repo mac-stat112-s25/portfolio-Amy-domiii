@@ -1,0 +1,110 @@
+---
+title: "Summary Sheet"
+format: html
+---
+
+## Basics of dataset
+### import data
+survey <- read.csv("URL")
+
+
+### the dimension of the data frame (number of columns and number of rows)
+dim(survey)
+
+### the number of rows of the data frame
+nrow(survey)
+
+### the first 6 rows of the data frame (by default)
+head(survey)
+
+### the first 3 rows of the data frame
+head(survey, 3)
+
+### the last 6 rows of the data frame (by default)
+tail(survey)
+
+### the names of the rows of the data frame
+names(survey)
+
+### Obtain the overall class of the survey object
+class(survey)
+
+### the internal structure of the data frame
+str(survey)
+
+## Basics of viz
+### general codes for viz:
+ggplot(___, aes(x = ___)) + 
+  geom___(color = "___", fill = "___") + 
+  labs(x = "___", y = "___")
+  
+### Why viz:
+2 types of variables:
+ - **response variable**
+ - **predictors**
+ 
+exploring relationships between variables:
+  - relationship trends: direction & form
+  - relationship strength: degree of variability from the trend
+
+
+## Bar Chart
+```{r}
+#basic
+#ggplot(dataset, aes(x = VariableForX, y=VariableForY)) + 
+ # geom_bar(color = "___", fill = "___") + [color = color of the outline of bars; fill = color of the fill of bars]
+ # labs(title = "___", x = "___", y = "___") +
+ # theme_minimal() [optional]
+
+
+```
+
+
+  
+## Histogram
+```{r}
+#ggplot(dataset, aes(x = VariableForX, y=VariableForY)) + 
+ # geom_histogram(color = "___", fill = "___",binwidth = number) + [color = color of the outline of bars; fill = color of the fill of bars; usually binwidth = 30, 200 is also good]
+ # labs(title = "___", x = "___", y = "___") +
+ # theme_minimal() [optional]
+```
+
+## Density Plot: quantitative vs cateogorical
+```{r}
+#ggplot(dataset, aes(x = VariableForX, y=VariableForY, fill = ExtraVariable)) + 
+ # geom_density(color = "___", fill = "___", alpha = 0.5) + [color = color of the outline; fill = color of the fill; alpha = adds transparecy:the closer to 0, the more transparent]
+ # scale_fill_manual(values = c("color1", "color2", "color3"))+
+ # facet_wrap(~ExtraVariable)
+ # labs(title = "___", x = "___", y = "___") +
+ # theme_minimal() [optional]
+```
+  
+## Scatter Plot: 2 quantitative var
+```{r}
+#ggplot(dataset, aes(x = VariableForX, y=VariableForY)) + 
+#  geom_point(shape = number,color = "__") + [shape = the shape of the points(this is optional, usually the point is in circle, but when shape = 3, the point is in plus sign); color = the color of the points ]
+#  geom_smooth(method = "lm") + [add a trend line; method = "lm" --> linear line]
+ # labs(title = "___", x = "___", y = "___") +
+ # theme_minimal() [optional]
+
+#or
+  
+#ggplot(dataset, aes(x = VariableForX, y=VariableForY)) + 
+ # geom_text(aes(label = Variable)) 
+```
+
+## Violin & Box Plots: quantitative vs ca
+```{r}
+#Violin plot:
+#ggplot(dataset, aes(x = VariableForX, y=VariableForY)) + 
+ # geom_violin()
+
+#Box plot:
+#ggplot(dataset, aes(x = VariableForX, y=VariableForY)) + 
+ # geom_boxplot()
+```
+
+
+
+
+

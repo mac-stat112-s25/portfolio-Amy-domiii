@@ -22,6 +22,7 @@ book:
   
   chapters:
     - index.qmd
+    - Summary Sheet.qmd
 
     - part: "Best Work"
       chapters: 
@@ -38,6 +39,8 @@ book:
       - ica/ica-multi.qmd
       - ica/ica-spatial.qmd
       - ica/effective viz.qmd
+      - ica/ica-wrangling.qmd
+      - ica/ica-dates.qmd
 
 format:
   html:

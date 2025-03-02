@@ -180,8 +180,8 @@ head(midwest_boundaries)
 ```
 
 ```{r}
-ggplot(midwest_boundaries) + 
-   geom_sf() + 
+#ggplot(midwest_boundaries) + 
+#   geom_sf() + 
 #   geom_point(
 #     data = ___,
 #     aes(x = ___, y = ___),

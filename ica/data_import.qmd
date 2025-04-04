@@ -1,0 +1,51 @@
+---
+title: "data_import"
+format: html
+---
+
+```{r}
+library(tidyverse)
+ imdb_messy <- read_csv("~/Downloads/imdb_5000_messy.csv")
+```
+
+```{r}
+# This should be the folder where you stored this qmd!
+getwd()
+```
+
+```{r}
+imdb_messy |>
+  mutate(across(where(is.character), as.factor)) |>  # convert characters to factors in order to summarize
+  summary()
+```
+
+```{r}
+imdb_messy |>
+  count(color)
+```
+
+```{r}
+imdb_temp <- imdb_messy |> 
+  mutate(color = fct_recode(color,
+                            "Color" = "COLOR",
+                            "Color" = "color",
+                            "Black_White" = "B&W",
+                            "Black_White" = "Black and White"))
+
+imdb_temp |> 
+  count(color)
+```
+
+```{r}
+# Count the total number of rows in imdb_messy
+#___(imdb_messy)
+
+# Then count the number of NAs in each column
+#colSums(is.na(imdb_messy))
+
+# Then count the number of NAs in a specific column
+#imdb_messy |> 
+#  ___(___(is.na(actor_1_facebook_likes)))
+```
+
+

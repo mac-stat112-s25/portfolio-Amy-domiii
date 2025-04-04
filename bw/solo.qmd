@@ -1,0 +1,40 @@
+---
+title: "solo"
+format: html
+---
+
+```{r}
+library(ggplot2)
+library(sf)
+library(tidyverse)
+library(dplyr)
+library(rnaturalearth)
+
+COVID_AU <- read_csv("~/Downloads/COVID_AU_state.csv")
+```
+
+```{r}
+AU_map <- read_sf("~/Downloads/australia_Australia_Country_Boundary_MAPOG/australia_Australia_Country_Boundary.shp")
+```
+
+```{r}
+AU_states <- COVID_AU |>
+  group_by(state) |>
+  summarize(confirmed_total = sum(confirmed),
+            vaccines_total = sum(vaccines))
+head(AU_states)
+```
+
+
+```{r}
+ne_states(country = 'australia', returnclass = 'sf') |>
+  select(name, geometry) |>
+  left_join(AU_states, join_by(name == state)) |>
+ggplot() +
+  geom_sf(aes(fill = confirmed_total))+
+  facet_wrap(~ vaccines_total)
+```
+
+
+
+

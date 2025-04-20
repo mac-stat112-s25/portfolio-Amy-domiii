@@ -31,10 +31,33 @@ ne_states(country = 'australia', returnclass = 'sf') |>
   select(name, geometry) |>
   left_join(AU_states, join_by(name == state)) |>
 ggplot() +
-  geom_sf(aes(fill = confirmed_total))+
-  facet_wrap(~ vaccines_total)
+  geom_sf(aes(fill = confirmed_total),color = "white")+
+  labs(title = "Confirmed COVID-19 Cases in Australia", 
+       fill = "Confirmed Cases") +
+  theme_minimal() 
+
+ne_states(country = 'australia', returnclass = 'sf') |>
+  select(name, geometry) |>
+  left_join(AU_states, join_by(name == state)) |>
+ggplot() +
+  geom_sf(aes(fill = vaccines_total), color = "white") +
+  labs(title = "COVID-19 Vaccine Distribution in Australia", 
+       fill = "Total Vaccine Injection") +
+  theme_minimal()
+
 ```
 
+```{r}
+ne_states(country = 'australia', returnclass = 'sf') |>
+  select(name, geometry) |>
+  left_join(AU_states, join_by(name == state)) |>
+ggplot() +
+  geom_sf(aes(fill = vaccines_total), color = "white", size = 0.5) +
+  facet_wrap(~ confirmed_total) +
+  labs(title = "COVID-19 Confirmed Cases and Vaccine Distribution in Australia", 
+       fill = "Counts") +
+  theme_minimal()
+```
 
 
 

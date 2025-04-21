@@ -47,17 +47,25 @@ ggplot() +
 
 ```
 
+### Explanation
+This choropleth map of Australia visualizes the confirmed cases by state. The color intensity of each state indicates the total number of vaccines administered, with lighter colors representing higher coverage. From the plot, we observe that the states on the east coast have more cases that the other states.
+
 ```{r}
-ne_states(country = 'australia', returnclass = 'sf') |>
+AU_combined <- ne_states(country = 'australia', returnclass = 'sf') |>
   select(name, geometry) |>
-  left_join(AU_states, join_by(name == state)) |>
+  left_join(AU_states, join_by(name == state))
+
+AU_centroids <- st_centroid(AU_combined)
+
 ggplot() +
-  geom_sf(aes(fill = vaccines_total), color = "white", size = 0.5) +
-  facet_wrap(~ confirmed_total) +
+  geom_sf(data = AU_combined, aes(fill = vaccines_total), color = "white", size = 0.5) +
+  geom_sf(data = AU_centroids,aes(size = confirmed_total), color = "black", alpha = 0.7) +
+  scale_fill_viridis_c(option = "C", name = "Vaccines Administered") +
   labs(title = "COVID-19 Confirmed Cases and Vaccine Distribution in Australia", 
        fill = "Counts") +
   theme_minimal()
 ```
 
-
+### Explanation
+This choropleth map of Australia visualizes the relationship between COVID-19 vaccine distribution and confirmed cases by state. The color intensity of each state indicates the total number of vaccines administered, with lighter colors representing higher coverage. The black circles represent the total number of confirmed COVID-19 cases, with larger circles indicating more cases. From the plot, we observe that states with the highest confirmed cases also received greater vaccine distribution.
 

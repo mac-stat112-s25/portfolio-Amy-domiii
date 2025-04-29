@@ -36,17 +36,18 @@ grade_distribution |>
 
 ```{r}
 grade_distribution |>
-  mutate(grade = reorder(grade, ___)) |>
+  mutate(grade = fct_reorder(grade, n)) |>
   ggplot(aes(x = grade, y = n)) +
-  geom_col()
+    geom_col()
 ```
 
 ```{r}
 grade_distribution |>
   mutate(grade = fct_reorder(grade, n, .desc = TRUE)) |>
   ggplot(aes(x = grade, y = n)) +
-   geom_col()
+  geom_col()
 ```
+
 
 ```{r}
 grade_distribution |>

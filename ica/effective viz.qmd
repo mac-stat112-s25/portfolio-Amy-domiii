@@ -1,5 +1,0 @@
----
-title: "effective viz"
-format: html
----
-

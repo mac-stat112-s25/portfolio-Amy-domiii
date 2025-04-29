@@ -38,14 +38,61 @@ imdb_temp |>
 
 ```{r}
 # Count the total number of rows in imdb_messy
-#___(imdb_messy)
-
+nrow(imdb_messy)
 # Then count the number of NAs in each column
-#colSums(is.na(imdb_messy))
+colSums(is.na(imdb_messy))
 
 # Then count the number of NAs in a specific column
-#imdb_messy |> 
-#  ___(___(is.na(actor_1_facebook_likes)))
+imdb_messy |> 
+  filter(is.na(actor_1_facebook_likes))
 ```
 
+```{r}
+imdb_messy |> 
+  summarize(mean(duration, na.rm = TRUE))
+```
+
+```{r}
+imdb_temp <- drop_na(imdb_messy)
+nrow(imdb_temp)
+```
+
+```{r}
+colSums(is.na(imdb_temp))
+```
+
+```{r}
+ggplot(imdb_messy, aes(x = duration, fill = color)) +
+  geom_density()
+```
+
+```{r}
+# Approach 1
+imdb_temp <- imdb_messy |> 
+  select(duration, color) |> 
+  drop_na()
+dim(imdb_temp)
+```
+
+```{r}
+# Approach 2
+imdb_temp <- imdb_messy |> 
+  filter(!is.na(duration), !is.na(color))
+dim(imdb_temp)
+```
+
+```{r}
+# Plot
+ggplot(imdb_temp, aes(x = duration, fill = color)) +
+  geom_density()
+```
+
+```{r}
+imdb_temp <- imdb_messy |> 
+  mutate(actor_1_facebook_likes =
+         replace_na(actor_1_facebook_likes, 0))
+
+imdb_temp |> 
+  summarize(sum(is.na(actor_1_facebook_likes)))
+```
 

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>10&nbsp; Mulivariate Viz – COMP/STAT112 Notebook</title>
+<title>12&nbsp; Mulivariate Viz – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,7 +53,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -75,8 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -102,37 +97,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="../style/custom.css">
+}</script><link rel="stylesheet" href="../style/custom.css">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-multi.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-multi.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Your Name Here</a> 
+      <a href="../">Amy Yang</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -150,16 +135,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Summary Sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary Sheet</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -170,112 +149,163 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-uni.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-bi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-tri.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-quad.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Quadvariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/bw-spatial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bw/solo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">solo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Solo Proj</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../bw/Exam-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../bw/Exam-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exam2</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">In-class Activities</span></a>
+ <span class="menu-text">Summary</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Summary Sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary Sheet</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">In-class Activities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-uni.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-bi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-multi.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-spatial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../ica/effective viz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">effective viz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-wrangling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">ica-wrangling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Wrangling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ica-dates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">ica-dates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ica/ica-reshaping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">ica-reshaping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ica/ica-joining.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">ica-joining</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ica-factors</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ica/ica-strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">ica-strings</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ica/data_import.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">data_import</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-multi.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></a></li></ol></nav>
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-multi.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></a></li></ol></nav><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">
+<span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span>
+</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -289,17 +319,346 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<p>Use this file for practice with the <strong>mulivariate viz</strong> in-class activity. Refer to the class website for details.</p>
+</header><p>Use this file for practice with the <strong>mulivariate viz</strong> in-class activity. Refer to the class website for details.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Import data</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>weather <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/weather_3_locations.csv"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># Check out the first 6 rows</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># What are the units of observation?</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="fu">head</span>(weather)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        date   location mintemp maxtemp rainfall evaporation sunshine
+1 2020-01-01 Wollongong    17.1    23.1        0          NA       NA
+2 2020-01-02 Wollongong    17.7    24.2        0          NA       NA
+3 2020-01-03 Wollongong    19.7    26.8        0          NA       NA
+4 2020-01-04 Wollongong    20.4    35.5        0          NA       NA
+5 2020-01-05 Wollongong    19.8    21.4        0          NA       NA
+6 2020-01-06 Wollongong    18.3    22.9        0          NA       NA
+  windgustdir windgustspeed winddir9am winddir3pm windspeed9am windspeed3pm
+1         SSW            39        SSW        SSE           20           15
+2         SSW            37          S        ENE           13           15
+3          NE            41        NNW        NNE            7           17
+4         SSW            78         NE        NNE           15           17
+5         SSW            57        SSW          S           31           35
+6          NE            35        ESE         NE           17           20
+  humidity9am humidity3pm pressure9am pressure3pm cloud9am cloud3pm temp9am
+1          69          64      1014.9      1014.0        8        1    19.1
+2          72          54      1020.1      1017.7        7        1    19.8
+3          72          71      1017.5      1013.0        6       NA    23.4
+4          77          69      1008.8      1003.9       NA       NA    24.5
+5          70          75      1018.9      1019.9       NA        7    20.7
+6          71          71      1021.2      1018.2       NA       NA    20.9
+  temp3pm raintoday risk_mm raintomorrow
+1    22.9        No     0.0           No
+2    23.6        No     0.0           No
+3    25.7        No     0.0           No
+4    26.7        No     0.0           No
+5    20.0        No     0.0           No
+6    22.6        No     0.8           No</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># How many data points do we have? </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">nrow</span>(weather)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2367</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># What type of variables do we have?</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">str</span>(weather)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   2367 obs. of  24 variables:
+ $ date         : Date, format: "2020-01-01" "2020-01-02" ...
+ $ location     : chr  "Wollongong" "Wollongong" "Wollongong" "Wollongong" ...
+ $ mintemp      : num  17.1 17.7 19.7 20.4 19.8 18.3 19.9 20.1 19.8 20.5 ...
+ $ maxtemp      : num  23.1 24.2 26.8 35.5 21.4 22.9 25.6 23.2 23.1 25.4 ...
+ $ rainfall     : num  0 0 0 0 0 0 0.8 1.6 0 0 ...
+ $ evaporation  : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ sunshine     : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ windgustdir  : chr  "SSW" "SSW" "NE" "SSW" ...
+ $ windgustspeed: int  39 37 41 78 57 35 44 41 39 56 ...
+ $ winddir9am   : chr  "SSW" "S" "NNW" "NE" ...
+ $ winddir3pm   : chr  "SSE" "ENE" "NNE" "NNE" ...
+ $ windspeed9am : int  20 13 7 15 31 17 30 31 24 19 ...
+ $ windspeed3pm : int  15 15 17 17 35 20 7 33 26 39 ...
+ $ humidity9am  : int  69 72 72 77 70 71 76 77 76 79 ...
+ $ humidity3pm  : int  64 54 71 69 75 71 72 76 79 76 ...
+ $ pressure9am  : num  1015 1020 1018 1009 1019 ...
+ $ pressure3pm  : num  1014 1018 1013 1004 1020 ...
+ $ cloud9am     : int  8 7 6 NA NA NA NA 8 NA NA ...
+ $ cloud3pm     : int  1 1 NA NA 7 NA NA NA NA NA ...
+ $ temp9am      : num  19.1 19.8 23.4 24.5 20.7 20.9 22.9 21.3 21.2 23 ...
+ $ temp3pm      : num  22.9 23.6 25.7 26.7 20 22.6 24.9 22.2 22.2 25.1 ...
+ $ raintoday    : chr  "No" "No" "No" "No" ...
+ $ risk_mm      : num  0 0 0 0 0 0.8 1.6 0 0 1 ...
+ $ raintomorrow : chr  "No" "No" "No" "No" ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm)) <span class="sc">+</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 19 rows containing non-finite outside the scale range
+(`stat_density()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Plot 1 (no facets &amp; starting from a density plot of temp3pm)</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm, <span class="at">fill =</span> location)) <span class="sc">+</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 19 rows containing non-finite outside the scale range
+(`stat_density()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Plot 2 (no facets or densities)</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> location)) <span class="sc">+</span> </span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 19 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Plot 3 (facets)</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm, <span class="at">fill =</span> location)) <span class="sc">+</span> </span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> location)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 19 rows containing non-finite outside the scale range
+(`stat_density()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Don't worry about the syntax (we'll learn it soon)</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>woll <span class="ot">&lt;-</span> weather <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">filter</span>(location <span class="sc">==</span> <span class="st">"Wollongong"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># How often does it raintoday?</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="co"># Fill your geometric layer with the color blue.</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday)) <span class="sc">+</span> </span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># If it does raintoday, what does this tell us about raintomorrow?</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="co"># Use your intuition first</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday)) <span class="sc">+</span> </span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> raintomorrow))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Now compare different approaches</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="co"># Default: stacked bars</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb21-5"><a href="#cb21-5"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># Side-by-side bars</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Proportional bars</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="co"># position = "fill" refers to filling the frame, nothing to do with the color-related fill</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb23-4"><a href="#cb23-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># THINK: What variable goes on the y-axis?</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="co"># For the curve, try adding span = 0.5 to tweak the curvature</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date)) <span class="sc">+</span> </span>
+<span id="cb24-4"><a href="#cb24-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb24-5"><a href="#cb24-5"></a>  <span class="fu">geom_smooth</span>(<span class="at">span =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 18 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 18 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="co"># Instead of a curve that captures the general TREND,</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="co"># draw a line that illustrates the movement of RAW temperatures from day to day</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: We haven't learned this geom yet! Guess.</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date)) <span class="sc">+</span> </span>
+<span id="cb28-5"><a href="#cb28-5"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="co"># Plot temp3pm vs temp9am</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="co"># Change the code in order to indicate the location to which each data point corresponds</span></span>
+<span id="cb29-3"><a href="#cb29-3"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am, <span class="at">color =</span> location)) <span class="sc">+</span> </span>
+<span id="cb29-4"><a href="#cb29-4"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 27 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># Change the code in order to indicate the location to which each data point corresponds</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="co"># AND identify the days on which it rained / didn't raintoday</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am, <span class="at">color =</span> location)) <span class="sc">+</span> </span>
+<span id="cb31-4"><a href="#cb31-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> raintoday)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 27 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># How many ways can you think to make that plot of temp3pm vs temp9am with info about location and rain?</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a><span class="co"># Play around!</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a></span>
+<span id="cb33-4"><a href="#cb33-4"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am, <span class="at">color =</span> location, <span class="at">shape =</span> raintoday)) <span class="sc">+</span> </span>
+<span id="cb33-5"><a href="#cb33-5"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 69 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># Change the code in order to construct a line plot of temp3pm vs date for each separate location (no points!)</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date, <span class="at">color =</span> location)) <span class="sc">+</span> </span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># Plot the relationship of raintomorrow &amp; raintoday</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a><span class="co"># Change the code in order to indicate this relationship by location</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb36-4"><a href="#cb36-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span> </span>
+<span id="cb36-5"><a href="#cb36-5"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> location)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ica-multi_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 <!-- -->
 
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -918,27 +1277,167 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../ica/ica-bi.html" class="pagination-link" aria-label="Bivariate Viz">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../ica/ica-spatial.html" class="pagination-link" aria-label="Spatial Viz">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Mulivariate Viz"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>Use this file for practice with the **mulivariate viz** in-class activity.  Refer to the class website for details.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a href="#cb37-1"></a><span class="co">---</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a><span class="an">title:</span><span class="co"> "Mulivariate Viz"</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="co">---</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a></span>
+<span id="cb37-5"><a href="#cb37-5"></a>Use this file for practice with the **mulivariate viz** in-class activity.  Refer to the class website for details.</span>
+<span id="cb37-6"><a href="#cb37-6"></a></span>
+<span id="cb37-9"><a href="#cb37-9"></a><span class="in">```{r}</span></span>
+<span id="cb37-10"><a href="#cb37-10"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb37-11"><a href="#cb37-11"></a></span>
+<span id="cb37-12"><a href="#cb37-12"></a><span class="co"># Import data</span></span>
+<span id="cb37-13"><a href="#cb37-13"></a>weather <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/weather_3_locations.csv"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb37-14"><a href="#cb37-14"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
+<span id="cb37-15"><a href="#cb37-15"></a></span>
+<span id="cb37-16"><a href="#cb37-16"></a><span class="co"># Check out the first 6 rows</span></span>
+<span id="cb37-17"><a href="#cb37-17"></a><span class="co"># What are the units of observation?</span></span>
+<span id="cb37-18"><a href="#cb37-18"></a><span class="fu">head</span>(weather)</span>
+<span id="cb37-19"><a href="#cb37-19"></a></span>
+<span id="cb37-20"><a href="#cb37-20"></a><span class="co"># How many data points do we have? </span></span>
+<span id="cb37-21"><a href="#cb37-21"></a><span class="fu">nrow</span>(weather)</span>
+<span id="cb37-22"><a href="#cb37-22"></a></span>
+<span id="cb37-23"><a href="#cb37-23"></a><span class="co"># What type of variables do we have?</span></span>
+<span id="cb37-24"><a href="#cb37-24"></a><span class="fu">str</span>(weather)</span>
+<span id="cb37-25"><a href="#cb37-25"></a><span class="in">```</span></span>
+<span id="cb37-26"><a href="#cb37-26"></a></span>
+<span id="cb37-29"><a href="#cb37-29"></a><span class="in">```{r}</span></span>
+<span id="cb37-30"><a href="#cb37-30"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm)) <span class="sc">+</span> </span>
+<span id="cb37-31"><a href="#cb37-31"></a>  <span class="fu">geom_density</span>()</span>
+<span id="cb37-32"><a href="#cb37-32"></a><span class="in">```</span></span>
+<span id="cb37-33"><a href="#cb37-33"></a></span>
+<span id="cb37-36"><a href="#cb37-36"></a><span class="in">```{r}</span></span>
+<span id="cb37-37"><a href="#cb37-37"></a><span class="co"># Plot 1 (no facets &amp; starting from a density plot of temp3pm)</span></span>
+<span id="cb37-38"><a href="#cb37-38"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm, <span class="at">fill =</span> location)) <span class="sc">+</span> </span>
+<span id="cb37-39"><a href="#cb37-39"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span>
+<span id="cb37-40"><a href="#cb37-40"></a><span class="in">```</span></span>
+<span id="cb37-41"><a href="#cb37-41"></a></span>
+<span id="cb37-44"><a href="#cb37-44"></a><span class="in">```{r}</span></span>
+<span id="cb37-45"><a href="#cb37-45"></a><span class="co"># Plot 2 (no facets or densities)</span></span>
+<span id="cb37-46"><a href="#cb37-46"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> location)) <span class="sc">+</span> </span>
+<span id="cb37-47"><a href="#cb37-47"></a>  <span class="fu">geom_boxplot</span>()</span>
+<span id="cb37-48"><a href="#cb37-48"></a><span class="in">```</span></span>
+<span id="cb37-49"><a href="#cb37-49"></a></span>
+<span id="cb37-52"><a href="#cb37-52"></a><span class="in">```{r}</span></span>
+<span id="cb37-53"><a href="#cb37-53"></a><span class="co"># Plot 3 (facets)</span></span>
+<span id="cb37-54"><a href="#cb37-54"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> temp3pm, <span class="at">fill =</span> location)) <span class="sc">+</span> </span>
+<span id="cb37-55"><a href="#cb37-55"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb37-56"><a href="#cb37-56"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> location)</span>
+<span id="cb37-57"><a href="#cb37-57"></a><span class="in">```</span></span>
+<span id="cb37-58"><a href="#cb37-58"></a></span>
+<span id="cb37-61"><a href="#cb37-61"></a><span class="in">```{r}</span></span>
+<span id="cb37-62"><a href="#cb37-62"></a><span class="co"># Don't worry about the syntax (we'll learn it soon)</span></span>
+<span id="cb37-63"><a href="#cb37-63"></a>woll <span class="ot">&lt;-</span> weather <span class="sc">|&gt;</span></span>
+<span id="cb37-64"><a href="#cb37-64"></a>  <span class="fu">filter</span>(location <span class="sc">==</span> <span class="st">"Wollongong"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb37-65"><a href="#cb37-65"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
+<span id="cb37-66"><a href="#cb37-66"></a><span class="in">```</span></span>
+<span id="cb37-67"><a href="#cb37-67"></a></span>
+<span id="cb37-70"><a href="#cb37-70"></a><span class="in">```{r}</span></span>
+<span id="cb37-71"><a href="#cb37-71"></a><span class="co"># How often does it raintoday?</span></span>
+<span id="cb37-72"><a href="#cb37-72"></a><span class="co"># Fill your geometric layer with the color blue.</span></span>
+<span id="cb37-73"><a href="#cb37-73"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday)) <span class="sc">+</span> </span>
+<span id="cb37-74"><a href="#cb37-74"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue"</span>)</span>
+<span id="cb37-75"><a href="#cb37-75"></a><span class="in">```</span></span>
+<span id="cb37-76"><a href="#cb37-76"></a></span>
+<span id="cb37-79"><a href="#cb37-79"></a><span class="in">```{r}</span></span>
+<span id="cb37-80"><a href="#cb37-80"></a><span class="co"># If it does raintoday, what does this tell us about raintomorrow?</span></span>
+<span id="cb37-81"><a href="#cb37-81"></a><span class="co"># Use your intuition first</span></span>
+<span id="cb37-82"><a href="#cb37-82"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday)) <span class="sc">+</span> </span>
+<span id="cb37-83"><a href="#cb37-83"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">fill =</span> raintomorrow))</span>
+<span id="cb37-84"><a href="#cb37-84"></a><span class="in">```</span></span>
+<span id="cb37-85"><a href="#cb37-85"></a></span>
+<span id="cb37-88"><a href="#cb37-88"></a><span class="in">```{r}</span></span>
+<span id="cb37-89"><a href="#cb37-89"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb37-90"><a href="#cb37-90"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb37-91"><a href="#cb37-91"></a><span class="in">```</span></span>
+<span id="cb37-92"><a href="#cb37-92"></a></span>
+<span id="cb37-95"><a href="#cb37-95"></a><span class="in">```{r}</span></span>
+<span id="cb37-96"><a href="#cb37-96"></a><span class="co"># Now compare different approaches</span></span>
+<span id="cb37-97"><a href="#cb37-97"></a></span>
+<span id="cb37-98"><a href="#cb37-98"></a><span class="co"># Default: stacked bars</span></span>
+<span id="cb37-99"><a href="#cb37-99"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb37-100"><a href="#cb37-100"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb37-101"><a href="#cb37-101"></a><span class="in">```</span></span>
+<span id="cb37-102"><a href="#cb37-102"></a></span>
+<span id="cb37-105"><a href="#cb37-105"></a><span class="in">```{r}</span></span>
+<span id="cb37-106"><a href="#cb37-106"></a><span class="co"># Side-by-side bars</span></span>
+<span id="cb37-107"><a href="#cb37-107"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb37-108"><a href="#cb37-108"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span>
+<span id="cb37-109"><a href="#cb37-109"></a><span class="in">```</span></span>
+<span id="cb37-110"><a href="#cb37-110"></a></span>
+<span id="cb37-113"><a href="#cb37-113"></a><span class="in">```{r}</span></span>
+<span id="cb37-114"><a href="#cb37-114"></a><span class="co"># Proportional bars</span></span>
+<span id="cb37-115"><a href="#cb37-115"></a><span class="co"># position = "fill" refers to filling the frame, nothing to do with the color-related fill</span></span>
+<span id="cb37-116"><a href="#cb37-116"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb37-117"><a href="#cb37-117"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span>
+<span id="cb37-118"><a href="#cb37-118"></a><span class="in">```</span></span>
+<span id="cb37-119"><a href="#cb37-119"></a></span>
+<span id="cb37-122"><a href="#cb37-122"></a><span class="in">```{r}</span></span>
+<span id="cb37-123"><a href="#cb37-123"></a><span class="co"># THINK: What variable goes on the y-axis?</span></span>
+<span id="cb37-124"><a href="#cb37-124"></a><span class="co"># For the curve, try adding span = 0.5 to tweak the curvature</span></span>
+<span id="cb37-125"><a href="#cb37-125"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date)) <span class="sc">+</span> </span>
+<span id="cb37-126"><a href="#cb37-126"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb37-127"><a href="#cb37-127"></a>  <span class="fu">geom_smooth</span>(<span class="at">span =</span> <span class="fl">0.5</span>)</span>
+<span id="cb37-128"><a href="#cb37-128"></a><span class="in">```</span></span>
+<span id="cb37-129"><a href="#cb37-129"></a></span>
+<span id="cb37-132"><a href="#cb37-132"></a><span class="in">```{r}</span></span>
+<span id="cb37-133"><a href="#cb37-133"></a><span class="co"># Instead of a curve that captures the general TREND,</span></span>
+<span id="cb37-134"><a href="#cb37-134"></a><span class="co"># draw a line that illustrates the movement of RAW temperatures from day to day</span></span>
+<span id="cb37-135"><a href="#cb37-135"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: We haven't learned this geom yet! Guess.</span></span>
+<span id="cb37-136"><a href="#cb37-136"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date)) <span class="sc">+</span> </span>
+<span id="cb37-137"><a href="#cb37-137"></a>  <span class="fu">geom_line</span>()</span>
+<span id="cb37-138"><a href="#cb37-138"></a><span class="in">```</span></span>
+<span id="cb37-139"><a href="#cb37-139"></a></span>
+<span id="cb37-142"><a href="#cb37-142"></a><span class="in">```{r}</span></span>
+<span id="cb37-143"><a href="#cb37-143"></a><span class="co"># Plot temp3pm vs temp9am</span></span>
+<span id="cb37-144"><a href="#cb37-144"></a><span class="co"># Change the code in order to indicate the location to which each data point corresponds</span></span>
+<span id="cb37-145"><a href="#cb37-145"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am, <span class="at">color =</span> location)) <span class="sc">+</span> </span>
+<span id="cb37-146"><a href="#cb37-146"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb37-147"><a href="#cb37-147"></a><span class="in">```</span></span>
+<span id="cb37-148"><a href="#cb37-148"></a></span>
+<span id="cb37-151"><a href="#cb37-151"></a><span class="in">```{r}</span></span>
+<span id="cb37-152"><a href="#cb37-152"></a><span class="co"># Change the code in order to indicate the location to which each data point corresponds</span></span>
+<span id="cb37-153"><a href="#cb37-153"></a><span class="co"># AND identify the days on which it rained / didn't raintoday</span></span>
+<span id="cb37-154"><a href="#cb37-154"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am, <span class="at">color =</span> location)) <span class="sc">+</span> </span>
+<span id="cb37-155"><a href="#cb37-155"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb37-156"><a href="#cb37-156"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> raintoday)</span>
+<span id="cb37-157"><a href="#cb37-157"></a><span class="in">```</span></span>
+<span id="cb37-158"><a href="#cb37-158"></a></span>
+<span id="cb37-161"><a href="#cb37-161"></a><span class="in">```{r}</span></span>
+<span id="cb37-162"><a href="#cb37-162"></a><span class="co"># How many ways can you think to make that plot of temp3pm vs temp9am with info about location and rain?</span></span>
+<span id="cb37-163"><a href="#cb37-163"></a><span class="co"># Play around!</span></span>
+<span id="cb37-164"><a href="#cb37-164"></a></span>
+<span id="cb37-165"><a href="#cb37-165"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> temp9am, <span class="at">color =</span> location, <span class="at">shape =</span> raintoday)) <span class="sc">+</span> </span>
+<span id="cb37-166"><a href="#cb37-166"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb37-167"><a href="#cb37-167"></a><span class="in">```</span></span>
+<span id="cb37-168"><a href="#cb37-168"></a></span>
+<span id="cb37-171"><a href="#cb37-171"></a><span class="in">```{r}</span></span>
+<span id="cb37-172"><a href="#cb37-172"></a><span class="co"># Change the code in order to construct a line plot of temp3pm vs date for each separate location (no points!)</span></span>
+<span id="cb37-173"><a href="#cb37-173"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">y =</span> temp3pm, <span class="at">x =</span> date, <span class="at">color =</span> location)) <span class="sc">+</span> </span>
+<span id="cb37-174"><a href="#cb37-174"></a>  <span class="fu">geom_line</span>()</span>
+<span id="cb37-175"><a href="#cb37-175"></a><span class="in">```</span></span>
+<span id="cb37-176"><a href="#cb37-176"></a></span>
+<span id="cb37-179"><a href="#cb37-179"></a><span class="in">```{r}</span></span>
+<span id="cb37-180"><a href="#cb37-180"></a><span class="co"># Plot the relationship of raintomorrow &amp; raintoday</span></span>
+<span id="cb37-181"><a href="#cb37-181"></a><span class="co"># Change the code in order to indicate this relationship by location</span></span>
+<span id="cb37-182"><a href="#cb37-182"></a><span class="fu">ggplot</span>(weather, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
+<span id="cb37-183"><a href="#cb37-183"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span> </span>
+<span id="cb37-184"><a href="#cb37-184"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> location)</span>
+<span id="cb37-185"><a href="#cb37-185"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-
 
 
 

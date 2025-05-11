@@ -4,7 +4,7 @@ project:
 
 book:
   title: "COMP/STAT112 Notebook"
-  author: "Your Name Here"
+  author: "Amy Yang"
   date: today
   reader-mode: true
   page-navigation: true
@@ -13,7 +13,7 @@ book:
   
   
   sidebar:
-    title: "Your Name Here"
+    title: "Amy Yang"
     collapse-level: 2
     style: "docked"
     pinned: true
@@ -22,7 +22,7 @@ book:
   
   chapters:
     - index.qmd
-    - Summary Sheet.qmd
+    
 
     - part: "Best Work"
       chapters: 
@@ -32,6 +32,12 @@ book:
       - bw/bw-quad.qmd
       - bw/bw-spatial.qmd
       - bw/solo.qmd
+      - bw/Exam-1.qmd
+      - bw/Exam-2.qmd
+    
+    - part: "Summary"
+      chapters: 
+        - Summary Sheet.qmd
 
     - part: "In-class Activities"
       chapters: 

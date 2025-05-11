@@ -1,5 +1,5 @@
 ---
-title: "solo"
+title: "Solo Proj"
 format: html
 ---
 
@@ -9,12 +9,15 @@ library(sf)
 library(tidyverse)
 library(dplyr)
 library(rnaturalearth)
+library(ozmaps)
 
 COVID_AU <- read_csv("~/Downloads/COVID_AU_state.csv")
 ```
 
 ```{r}
 AU_map <- read_sf("~/Downloads/australia_Australia_Country_Boundary_MAPOG/australia_Australia_Country_Boundary.shp")
+ozmap()
+sf_oz <- ozmap_data("states")
 ```
 
 ```{r}
@@ -25,30 +28,31 @@ AU_states <- COVID_AU |>
 head(AU_states)
 ```
 
-
 ```{r}
-ne_states(country = 'australia', returnclass = 'sf') |>
-  select(name, geometry) |>
-  left_join(AU_states, join_by(name == state)) |>
-ggplot() +
-  geom_sf(aes(fill = confirmed_total),color = "white")+
-  labs(title = "Confirmed COVID-19 Cases in Australia", 
-       fill = "Confirmed Cases") +
-  theme_minimal() 
+covid_map <- sf_oz %>%
+  left_join(AU_states, by = c("NAME" = "state"))
 
-ne_states(country = 'australia', returnclass = 'sf') |>
-  select(name, geometry) |>
-  left_join(AU_states, join_by(name == state)) |>
-ggplot() +
-  geom_sf(aes(fill = vaccines_total), color = "white") +
-  labs(title = "COVID-19 Vaccine Distribution in Australia", 
-       fill = "Total Vaccine Injection") +
-  theme_minimal()
+ggplot(covid_map) +
+  geom_sf(aes(fill = confirmed_total), color = "white") +
+  geom_sf_text(aes(label = NAME),size = 1.5, color = "white",check_overlap = TRUE)+
+  labs(
+    title = "Confirmed COVID-19 Cases in Australia",
+    fill = "Confirmed Cases"
+  ) +
+  theme_void()
 
+ggplot(covid_map) +
+  geom_sf(aes(fill = vaccines_total), color = "white", fontface = "bold") +
+  geom_sf_text(aes(label = NAME),size = 1.5, color = "white",fontface = "bold",check_overlap = TRUE)+
+  labs(
+    title = "COVID-19 Vaccine Distribution in Australia",
+    fill = "Total Vaccine Injection"
+  ) +
+  theme_void()
 ```
 
 ### Explanation
-This choropleth map of Australia visualizes the confirmed cases by state. The color intensity of each state indicates the total number of vaccines administered, with lighter colors representing higher coverage. From the plot, we observe that the states on the east coast have more cases that the other states.
+These two choropleth maps visualize the confirmed cases and vaccine distribution by state in Australia. The color intensity of each state indicates the total COVID confirmed cases and total number of vaccines administered from 2020 to 2023, with lighter colors representing greater number of confirmed cases and higher coverage of vaccines. From the plot, we observe that the states on the east coast have more cases and higher coverage of vaccines than that the other states.
 
 ```{r}
 AU_combined <- ne_states(country = 'australia', returnclass = 'sf') |>
@@ -57,13 +61,14 @@ AU_combined <- ne_states(country = 'australia', returnclass = 'sf') |>
 
 AU_centroids <- st_centroid(AU_combined)
 
-ggplot() +
+ggplot(covid_map) +
   geom_sf(data = AU_combined, aes(fill = vaccines_total), color = "white", size = 0.5) +
   geom_sf(data = AU_centroids,aes(size = confirmed_total), color = "black", alpha = 0.7) +
-  scale_fill_viridis_c(option = "C", name = "Vaccines Administered") +
+  geom_sf_text(aes(label = NAME),size = 1.5, color = "white",fontface = "bold",check_overlap = TRUE)+
+  scale_fill_viridis_c(name = "Vaccines Administered") +
   labs(title = "COVID-19 Confirmed Cases and Vaccine Distribution in Australia", 
        fill = "Counts") +
-  theme_minimal()
+  theme_void()
 ```
 
 ### Explanation

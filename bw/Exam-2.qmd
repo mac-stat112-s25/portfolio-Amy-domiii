@@ -1,0 +1,75 @@
+---
+title: "Exam2"
+format: html
+---
+
+```{r}
+library(tidytuesdayR)
+library(tidyverse)
+library(rnaturalearth)
+library(sf)
+
+tuesdata <-tt_load("2020-02-18")
+fc <- tuesdata$food_consumption
+str(fc)
+head(fc,22)
+```
+
+#### RQ1: Which 5 countries consume the most food are?
+show the answer as a 2-column table and as a graph
+sort the countries based on consumption from largest to smallest
+
+```{r}
+fc_total <- fc %>%
+  group_by(country) %>%
+  summarize(total_consumption = sum(consumption, na.rm = TRUE)) %>%
+  arrange(desc(total_consumption)) %>%
+  mutate(row = row_number())
+
+top5 <- fc_total %>%
+  filter(row <= 5) %>%
+  select(-row) 
+
+top5
+
+
+library(ggplot2)
+ggplot(top5, aes(x = reorder(country, total_consumption), y = total_consumption, fill = country)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Top 5 Countries by Total Food Consumption",
+       x = "Country", y = "Total Consumption (kg/person/year)") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+```
+
+
+#### RQ2: Which top 5 countries consume each food are?
+show the answer as a 3-column table(show the food category as the first column followed by country and consumption) and as a graph
+for each food, sort the countries based on consumption from largest to smallest
+
+```{r}
+top5_food <- fc %>%
+  arrange(food_category, desc(consumption)) %>%
+  group_by(food_category) %>%
+  mutate(row = row_number()) %>%
+  filter(row <= 5) %>%
+  ungroup()
+
+top5_food %>% 
+  select(food_category, country, consumption)
+
+
+ggplot(top5_food, aes(x = reorder(country, consumption), y = consumption, fill = food_category)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ food_category, scales = "free", ncol = 3) +
+  coord_flip() +
+  labs(title = "Top 5 Countries by Consumption for Each Food Category",
+       x = "Country", y = "Consumption (kg/person/year)") +
+  theme_minimal() +
+  theme(legend.position = "none",
+        strip.text = element_text(size = 10))
+
+```
+

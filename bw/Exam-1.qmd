@@ -1,0 +1,43 @@
+---
+title: "Exam1"
+format: html
+---
+
+```{r}
+library(tidytuesdayR)
+library(tidyverse)
+```
+
+```{r}
+tuesdata <-tt_load("2020-02-18")
+fc <- tuesdata$food_consumption
+dim(fc)
+```
+
+## RQ: What does the consumption of each food category in each country look like?
+
+```{r}
+
+fc_top10 <- fc %>%
+  group_by(food_category) %>%
+  top_n(10, consumption) %>%
+  ungroup() %>%
+  mutate(country = fct_reorder(country, consumption))
+
+fc_top10 %>%
+  ggplot(aes(x = consumption, y = country)) +
+  geom_col(fill = "steelblue") +
+  facet_wrap(~ food_category, scales = "free_y") +
+  labs(
+    title = "Top 10 Countries for Each Food Category",
+    x = "Consumption (kg/person/year)",
+    y = "Country"
+  ) +
+  theme_minimal() +
+  theme(
+    strip.text = element_text(size = 10, face = "bold"),
+    axis.text.y = element_text(size = 5)
+  )
+
+```
+

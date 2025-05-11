@@ -1,5 +1,5 @@
 ---
-title: "Summary Sheet"
+title: "Summary Sheet--ggplot2"
 format: html
 ---
 
@@ -111,9 +111,4 @@ library(pdftools)
 files <- list.files(pattern = "https://github.com/ujjwalkarn/DataScienceR/blob/master/R%20cheat%20sheets/ggplot2-cheatsheet.pdf")
 ```
 
-
-## data wrangling-cheatsheet
-```{r}
-files <- list.files(pattern = "https://github.com/ujjwalkarn/DataScienceR/blob/master/R%20cheat%20sheets/data-wrangling-cheatsheet.pdf")
-```
 

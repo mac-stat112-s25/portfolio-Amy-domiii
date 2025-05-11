@@ -37,7 +37,8 @@ book:
     
     - part: "Summary"
       chapters: 
-        - Summary Sheet.qmd
+        - Summary Sheet_ggplot.qmd
+        - Summary Sheet_wrangling
 
     - part: "In-class Activities"
       chapters: 

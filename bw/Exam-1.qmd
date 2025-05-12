@@ -1,9 +1,9 @@
 ---
-title: "Exam1"
+title: "Exam 1"
 format: html
 ---
 
-```{r}
+```{r setup, warning=FALSE}
 library(tidytuesdayR)
 library(tidyverse)
 ```
@@ -17,8 +17,14 @@ dim(fc)
 ## RQ: What does the consumption of each food category in each country look like?
 
 ```{r}
+fc_clean <- fc %>%
+  mutate(food_category = recode(food_category,
+    "Milk - inc. cheese" = "Milk & Cheese",
+    "Nuts inc. Peanut Butter" = "Nuts & PB",
+    "Wheat and Wheat Products" = "Wheat Products"
+  ))
 
-fc_top10 <- fc %>%
+fc_top10 <- fc_clean %>%
   group_by(food_category) %>%
   top_n(10, consumption) %>%
   ungroup() %>%

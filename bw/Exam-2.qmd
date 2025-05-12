@@ -1,5 +1,5 @@
 ---
-title: "Exam2"
+title: "Exam 2"
 format: html
 ---
 
@@ -50,7 +50,15 @@ show the answer as a 3-column table(show the food category as the first column f
 for each food, sort the countries based on consumption from largest to smallest
 
 ```{r}
-top5_food <- fc %>%
+fc_clean <- fc %>%
+  mutate(food_category = recode(food_category,
+    "Milk - inc. cheese" = "Milk & Cheese",
+    "Nuts inc. Peanut Butter" = "Nuts & PB",
+    "Wheat and Wheat Products" = "Wheat Products",
+    "Lamb & Goat" = "Lamb/Goat"
+  ))
+
+top5_food <- fc_clean %>%
   arrange(food_category, desc(consumption)) %>%
   group_by(food_category) %>%
   mutate(row = row_number()) %>%
@@ -70,6 +78,40 @@ ggplot(top5_food, aes(x = reorder(country, consumption), y = consumption, fill =
   theme_minimal() +
   theme(legend.position = "none",
         strip.text = element_text(size = 10))
+
+```
+
+#### RQ: What does the consumption of each food look like?
+```{r}
+fc_clean <- fc %>%
+  mutate(food_category = recode(food_category,
+    "Milk - inc. cheese" = "Milk & Cheese",
+    "Nuts inc. Peanut Butter" = "Nuts & PB",
+    "Wheat and Wheat Products" = "Wheat Products",
+    "Lamb & Goat" = "Lamb/Goat"
+  ))
+
+fc_top10 <- fc_clean %>%
+  group_by(food_category) %>%
+  slice_max(consumption, n = 10) %>%
+  ungroup() %>%
+  mutate(country = fct_reorder(country, consumption))
+
+# Plot: Top 10 consuming countries per food
+ggplot(fc_top10, aes(x = consumption, y = country)) +
+  geom_col(fill = "steelblue") +
+  facet_wrap(~ food_category, scales = "free_y") +
+  labs(
+    title = "Top 10 Countries by Food Consumption",
+    subtitle = "Per food category, in kg/person/year",
+    x = "Consumption (kg/person/year)",
+    y = "Country"
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(
+    strip.text = element_text(size = 11, face = "bold"),
+    axis.text.y = element_text(size = 7)
+  )
 
 ```
 

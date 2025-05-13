@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>3&nbsp; Trivariate Viz – COMP/STAT112 Notebook</title>
+<title>10&nbsp; Summary Sheet_wrangling – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,25 +53,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../bw/bw-quad.html" rel="next">
-<link href="../bw/bw-bi.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ica/ica-uni.html" rel="next">
+<link href="./Summary Sheet_ggplot.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -97,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="../style/custom.css">
+}</script><link rel="stylesheet" href="style/custom.css">
 </head>
 <body class="nav-sidebar docked">
 
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-tri.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Summary Sheet_ggplot.html">Summary</a></li><li class="breadcrumb-item"><a href="./Summary Sheet_wrangling.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary Sheet_wrangling</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Amy Yang</a> 
+      <a href="./">Amy Yang</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -137,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
@@ -152,49 +152,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-uni.html" class="sidebar-item-text sidebar-link">
+  <a href="./bw/bw-uni.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-bi.html" class="sidebar-item-text sidebar-link">
+  <a href="./bw/bw-bi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-tri.html" class="sidebar-item-text sidebar-link active">
+  <a href="./bw/bw-tri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-quad.html" class="sidebar-item-text sidebar-link">
+  <a href="./bw/bw-quad.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-spatial.html" class="sidebar-item-text sidebar-link">
+  <a href="./bw/bw-spatial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/solo.html" class="sidebar-item-text sidebar-link">
+  <a href="./bw/solo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Solo Proj</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/Exam-1.html" class="sidebar-item-text sidebar-link">
+  <a href="./bw/Exam-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/Exam-2.html" class="sidebar-item-text sidebar-link">
+  <a href="./bw/Exam-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Exam 2</span></span></a>
   </div>
 </li>
@@ -211,13 +211,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Summary Sheet_ggplot.html" class="sidebar-item-text sidebar-link">
+  <a href="./Summary Sheet_ggplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary Sheet--ggplot2</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Summary Sheet_wrangling.html" class="sidebar-item-text sidebar-link">
+  <a href="./Summary Sheet_wrangling.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary Sheet_wrangling</span></span></a>
   </div>
 </li>
@@ -234,73 +234,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-uni.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-uni.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-bi.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-bi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-multi.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-multi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-spatial.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-spatial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-effective.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-effective.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Effective</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-wrangling.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-wrangling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Wrangling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-dates.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-dates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Dates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-reshaping.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-reshaping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ica-reshaping</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-joining.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-joining.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">ica-joining</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-factors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ica-factors</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-strings.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/ica-strings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ica-strings</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/data_import.html" class="sidebar-item-text sidebar-link">
+  <a href="./ica/data_import.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">data_import</span></span></a>
   </div>
 </li>
@@ -310,13 +310,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#data-wrangling-cheatsheet" id="toc-data-wrangling-cheatsheet" class="nav-link active" data-scroll-target="#data-wrangling-cheatsheet"><span class="header-section-number">10.1</span> data wrangling-cheatsheet</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-tri.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Summary Sheet_ggplot.html">Summary</a></li><li class="breadcrumb-item"><a href="./Summary Sheet_wrangling.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary Sheet_wrangling</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span>
+<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Summary Sheet_wrangling</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -331,53 +335,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>Use this file to generate a professional looking <strong>trivariate</strong> visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>        date   location mintemp maxtemp rainfall evaporation sunshine
-1 2020-01-01 Wollongong    17.1    23.1        0          NA       NA
-2 2020-01-02 Wollongong    17.7    24.2        0          NA       NA
-3 2020-01-03 Wollongong    19.7    26.8        0          NA       NA
-4 2020-01-04 Wollongong    20.4    35.5        0          NA       NA
-5 2020-01-05 Wollongong    19.8    21.4        0          NA       NA
-6 2020-01-06 Wollongong    18.3    22.9        0          NA       NA
-  windgustdir windgustspeed winddir9am winddir3pm windspeed9am windspeed3pm
-1         SSW            39        SSW        SSE           20           15
-2         SSW            37          S        ENE           13           15
-3          NE            41        NNW        NNE            7           17
-4         SSW            78         NE        NNE           15           17
-5         SSW            57        SSW          S           31           35
-6          NE            35        ESE         NE           17           20
-  humidity9am humidity3pm pressure9am pressure3pm cloud9am cloud3pm temp9am
-1          69          64      1014.9      1014.0        8        1    19.1
-2          72          54      1020.1      1017.7        7        1    19.8
-3          72          71      1017.5      1013.0        6       NA    23.4
-4          77          69      1008.8      1003.9       NA       NA    24.5
-5          70          75      1018.9      1019.9       NA        7    20.7
-6          71          71      1021.2      1018.2       NA       NA    20.9
-  temp3pm raintoday risk_mm raintomorrow
-1    22.9        No     0.0           No
-2    23.6        No     0.0           No
-3    25.7        No     0.0           No
-4    26.7        No     0.0           No
-5    20.0        No     0.0           No
-6    22.6        No     0.8           No</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="bw-tri_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+</header><section id="data-wrangling-cheatsheet" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="data-wrangling-cheatsheet">
+<span class="header-section-number">10.1</span> data wrangling-cheatsheet</h2>
 
 
 <!-- -->
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -997,54 +961,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../bw/bw-bi.html" class="pagination-link" aria-label="Bivariate Viz">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span>
+      <a href="./Summary Sheet_ggplot.html" class="pagination-link" aria-label="Summary Sheet--ggplot2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary Sheet–ggplot2</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../bw/bw-quad.html" class="pagination-link" aria-label="Quadvariate Viz">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Viz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ica/ica-uni.html" class="pagination-link" aria-label="Univariate Viz">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "Trivariate Viz"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="an">execute:</span><span class="co"> </span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co">  warning: false</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">  message: false</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">  echo: false</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">---</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a>Use this file to generate a professional looking **trivariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.</span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="in">```{r}</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-16"><a href="#cb2-16"></a></span>
-<span id="cb2-17"><a href="#cb2-17"></a>weather <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/weather_3_locations.csv"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-18"><a href="#cb2-18"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))  </span>
-<span id="cb2-19"><a href="#cb2-19"></a></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="fu">head</span>(weather)</span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="in">```</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a></span>
-<span id="cb2-25"><a href="#cb2-25"></a><span class="in">```{r}</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a>woll <span class="ot">&lt;-</span> weather <span class="sc">|&gt;</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a>  <span class="fu">filter</span>(location <span class="sc">==</span> <span class="st">"Wollongong"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-28"><a href="#cb2-28"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date))</span>
-<span id="cb2-29"><a href="#cb2-29"></a><span class="in">```</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a></span>
-<span id="cb2-31"><a href="#cb2-31"></a></span>
-<span id="cb2-34"><a href="#cb2-34"></a><span class="in">```{r}</span></span>
-<span id="cb2-35"><a href="#cb2-35"></a><span class="fu">ggplot</span>(woll, <span class="fu">aes</span>(<span class="at">x =</span> raintoday, <span class="at">fill =</span> raintomorrow)) <span class="sc">+</span> </span>
-<span id="cb2-36"><a href="#cb2-36"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)<span class="sc">+</span></span>
-<span id="cb2-37"><a href="#cb2-37"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Comparison of Rain Occurrence on the Day Recorded and the Day after"</span>,</span>
-<span id="cb2-38"><a href="#cb2-38"></a>       <span class="at">x =</span> <span class="st">"Rained Today"</span>,</span>
-<span id="cb2-39"><a href="#cb2-39"></a>       <span class="at">fill =</span> <span class="st">"Rained the Day After"</span>,</span>
-<span id="cb2-40"><a href="#cb2-40"></a>       <span class="at">y =</span> <span class="st">"The Count of Days"</span>)</span>
-<span id="cb2-41"><a href="#cb2-41"></a><span class="in">```</span></span>
-<span id="cb2-42"><a href="#cb2-42"></a></span>
-<span id="cb2-43"><a href="#cb2-43"></a></span>
-<span id="cb2-44"><a href="#cb2-44"></a></span>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Summary Sheet_wrangling"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">  warning: false</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">  message: false</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">  echo: false</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">---</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">## data wrangling-cheatsheet</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="in">```{r}</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="fu">library</span>(pdftools)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">"https://github.com/ujjwalkarn/DataScienceR/blob/master/R%20cheat%20sheets/data-wrangling-cheatsheet.pdf"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -1,6 +1,11 @@
 ---
 title: "Solo Proj"
 format: html
+
+execute: 
+  warning: false
+  message: false
+  echo: false
 ---
 
 ```{r}
@@ -28,6 +33,7 @@ AU_states <- COVID_AU |>
 head(AU_states)
 ```
 
+
 ```{r}
 covid_map <- sf_oz %>%
   left_join(AU_states, by = c("NAME" = "state"))
@@ -37,7 +43,8 @@ ggplot(covid_map) +
   geom_sf_text(aes(label = NAME),size = 1.5, color = "white",check_overlap = TRUE)+
   labs(
     title = "Confirmed COVID-19 Cases in Australia",
-    fill = "Confirmed Cases"
+    fill = "Confirmed Cases",
+    caption = "cr. Data aggregated from www.covid19data.com.au"
   ) +
   theme_void()
 
@@ -67,7 +74,9 @@ ggplot(covid_map) +
   geom_sf_text(aes(label = NAME),size = 1.5, color = "white",fontface = "bold",check_overlap = TRUE)+
   scale_fill_viridis_c(name = "Vaccines Administered") +
   labs(title = "COVID-19 Confirmed Cases and Vaccine Distribution in Australia", 
-       fill = "Counts") +
+       fill = "Counts",
+       caption = "cr. Data aggregated from www.covid19data.com.au"
+       ) +
   theme_void()
 ```
 

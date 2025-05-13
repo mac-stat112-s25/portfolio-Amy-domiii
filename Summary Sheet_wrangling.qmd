@@ -1,6 +1,11 @@
 ---
 title: "Summary Sheet_wrangling"
 format: html
+
+execute: 
+  warning: false
+  message: false
+  echo: false
 ---
 
 ## data wrangling-cheatsheet

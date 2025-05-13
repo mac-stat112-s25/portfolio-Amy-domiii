@@ -1,6 +1,11 @@
 ---
 title: "Summary Sheet--ggplot2"
 format: html
+
+execute: 
+  warning: false
+  message: false
+  echo: false
 ---
 
 ## Basics of dataset

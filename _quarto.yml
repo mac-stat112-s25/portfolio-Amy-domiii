@@ -38,7 +38,7 @@ book:
     - part: "Summary"
       chapters: 
         - Summary Sheet_ggplot.qmd
-        - Summary Sheet_wrangling
+        - Summary Sheet_wrangling.qmd
 
     - part: "In-class Activities"
       chapters: 
@@ -46,6 +46,7 @@ book:
       - ica/ica-bi.qmd
       - ica/ica-multi.qmd
       - ica/ica-spatial.qmd
+      - ica/ica-effective.qmd
       - ica/ica-wrangling.qmd
       - ica/ica-dates.qmd
       - ica/ica-reshaping.qmd
